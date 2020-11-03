@@ -25,7 +25,7 @@ def clickFunction():
     # to delete, and the ending of the text you want to delete.  If you're not sure
     # of the length, you can delete using the special value END to go all the way
     # to the end of the entry widget
-    #a_entry.delete(0,END)
+    a_entry.delete(0,END)
     a_entry.insert(0,answer)
 
 
