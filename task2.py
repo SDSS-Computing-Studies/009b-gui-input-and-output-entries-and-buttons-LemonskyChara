@@ -17,6 +17,7 @@ import tkinter as tk
 from tkinter import *
 
 win = tk.Tk()
+win.geometry("85x130")
 
 eoutput = StringVar()
 eoutput.set("Output goes here")
@@ -52,22 +53,19 @@ def factor():
 l1 = Label(win, text = "x^2 + bx + c")
 l2 = Label(win, text="b= ")
 l3 = Label(win, text="c= ")
-e1 = Entry(win, width = 2)
-e2 = Entry(win, width = 2)
+e1 = Entry(win, width = 3)
+e2 = Entry(win, width = 3)
 b1 = Button(win, text="Click to factor", command = factor)
 a_label = Label(win, text="The result is: ")
 a_entry = Entry(win, width = 15, textvariable = eoutput)
 
-l1.grid(row=1,column=1)
-l2.grid(row=2,column=1)
-l3.grid(row=2,column=3)
-e1.grid(row=2,column=2)
-e2.grid(row=2,column=4)
-b1.grid(row=3, column=2, columnspan=2)
-a_label.grid(row=4,column=1)
-a_entry.grid(row=4,column=2)
-
-
-
+l1.place(x=0,y=0)
+l2.place(x=0,y=20)
+l3.place(x=50,y=20)
+e1.place(x=22,y=20)
+e2.place(x=70,y=20)
+b1.place(x=0,y=40)
+a_label.place(x=0,y=65)
+a_entry.place(x=0,y=90)
 
 win.mainloop()
